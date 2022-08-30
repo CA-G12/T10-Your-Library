@@ -1,12 +1,12 @@
 const { Pool } = require('pg');
 require('dotenv')('.env');
 
-const {DATABASE_URL, DB_URL, BD_TEST_URL} = process.env;
+const {NODE_ENV, DATABASE_URL, DB_URL, BD_TEST_URL} = process.env;
 
 let db_url = '';
 let ssl = false;
 
-switch(process.env.NODE_ENV){
+switch(NODE_ENV){
     case 'dev':
        db_url =  DB_URL;
         break;
