@@ -1,0 +1,11 @@
+BEGIN;
+
+DROP TABLE IF EXISTS books CASCADE;
+CREATE TABLE books(
+    id SERIAL PRIMARY KEY, 
+    title VARCHAR(255) NOT NULL, 
+    discription TEXT NOT NULL,
+    url_image TEXT NOT NULL,
+    user_id INTEGER NOT NULL
+)
+COMMIT;

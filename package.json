@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "cross-env NODE_ENV=test",
     "dev": "cross-env NODE_ENV=dev nodemon src/server/",
     "production": "cross-env NODE_ENV=production",
 
 
+=======
+    "test": "jest ",
+    "start": "node src/server/index.js",
+    "dev": "nodemon src/server/index.js"
+>>>>>>> 7d7490bac0c91c569c8f0c338261f449537713c5
   },
   "repository": {
     "type": "git",

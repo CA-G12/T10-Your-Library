@@ -8,7 +8,7 @@ let ssl = false;
 
 switch(process.env.NODE_ENV){
     case 'dev':
-        db_url =  DB_URL;
+       db_url =  DB_URL;
         break;
     case 'tes':
         db_url = BD_test;
