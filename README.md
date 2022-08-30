@@ -16,7 +16,7 @@ Also, we have the profile page where the user can browse all his reviews and if 
 
 ## Entity Relationship diagram (ER)
 - link to [ER diagram](https://drawsql.app/teams/renter/diagrams/books).
-![ER](https://postimg.cc/2LzqnSHH)
+![ER](https://i.postimg.cc/tJ6hQ1FH/draw-SQL-export-2022-08-30-13-48.png)
 
 
 ## Installation
