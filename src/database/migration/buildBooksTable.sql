@@ -6,6 +6,6 @@ CREATE TABLE books(
     title VARCHAR(255) NOT NULL, 
     discription TEXT NOT NULL,
     url_image TEXT NOT NULL,
-    user_id INTEGER NOT NULL
+    user_id  SERIAL PRIMARY KEY
 )
 COMMIT;
