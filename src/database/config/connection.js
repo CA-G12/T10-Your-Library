@@ -1,29 +1,31 @@
 const { Pool } = require('pg');
 require('dotenv')('.env');
 
-const {NODE_ENV, DATABASE_URL, DB_URL, BD_TEST_URL} = process.env;
+const {
+  NODE_ENV, DATABASE_URL, DB_URL, BD_TEST_URL,
+} = process.env;
 
-let db_url = '';
+let dbUrl = '';
 let ssl = false;
 
-switch(NODE_ENV){
-    case 'dev':
-       db_url =  DB_URL;
-        break;
-    case 'tes':
-        db_url = BD_test;
-        break;
-    case 'production':
-        db_url =DATABASE_URL;
-        ssl = {rejectUnauthorized : false};
+switch (NODE_ENV) {
+  case 'dev':
+    dbUrl = DB_URL;
+    break;
+  case 'tes':
+    dbUrl = BD_TEST_URL;
+    break;
+  case 'production':
+    dbUrl = DATABASE_URL;
+    ssl = { rejectUnauthorized: false };
     break;
 
-    default:
-        throw new Error('invalid db url');
+  default:
+    throw new Error('invalid db url');
 }
 const connection = new Pool({
-    connectionString :  db_url,
-    ssl: ssl
-})
+  connectionString: dbUrl,
+  ssl,
+});
 
 module.exports = connection;
