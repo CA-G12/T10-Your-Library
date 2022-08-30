@@ -40,6 +40,7 @@ nav {
 ul.nav-list {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 li.nav-item {
@@ -52,19 +53,6 @@ a.nav-item-link {
     text-decoration: none;
 }
 
-a.nav-item-link.login, a.nav-item-link.signup {
-    padding: 6px 19px;
-    background-color: var(--orange);
-    border-radius: 6px;
-    color: white;
-    font-size: 16px;
-    font-weight: lighter
-}
-
-a.nav-item-link.login:hover, a.nav-item-link.signup:hover{
-    transform: scale(1.1);
-    background-color: var(--brown);
-}
 /* End Styling Nav Bar */
 
 /* Start Styling main Section */
@@ -206,6 +194,101 @@ button:hover{
     background-color: var(--brown);
 }
 /* End Styling Footer */
+
+/* Start Styling Login Pop Up */
+#login-form, #signup-form{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff20;
+    backdrop-filter: blur(.3rem);
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+button#close , #close-signup{
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    float: right;
+    margin-right: 21px;
+}
+
+.login-form, .signup-form{
+    text-align: center;
+    border: none;
+    
+}
+
+.form-body{
+    padding: 50px 25px 29px;
+    width: 350px;
+}
+
+.title{
+    color: var(--navy);
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0 0 60px;
+}
+
+.form-group{
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-icon{
+    color: #777;
+    font-size: 18px;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+.form-control{
+    font-size: 17px;
+    height: 45px;
+    width: 100%;
+    padding: 6px 0 6px 50px;
+    margin: 0 auto;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-control::placeholder{
+    color: #AEAFB1;
+}
+
+.btn{
+    padding: 6px 19px;
+    background-color: var(--orange);
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: lighter;
+    border: none;
+}
+/* End Styling Login Pop Up */
 
                                 /* End Styling Landing Page */
 

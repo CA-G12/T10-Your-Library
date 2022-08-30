@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/indexStyle.css">
     <link rel="shortcut icon" href="./assets/book-logo.png" type="image/x-icon">
-    <script src="" defer></script>
+    <script src="./JS/dom.js" defer></script>
+    <script src="./JS/script.js" defer></script>
     <title>Your Library</title>
 </head>
 <body>
@@ -26,10 +27,10 @@
                     <a href="#" class="nav-item-link">Community</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-item-link login">Login</a>
+                    <button href="#" class="nav-item-link  login-pop btn" id="login">Login</button>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-item-link signup">Sign up</a>
+                    <button href="#" class="nav-item-link  sign-up btn" id="signup">Sign up</button>
                 </li>
             </ul>
         </nav>
@@ -154,9 +155,77 @@
             <h1>
                 Subscribe to our page
             </h1>
-            <button class="btn know-more">Subscribe</button>
+            <button class=" login-pop know-more">Subscribe</button>
         </div>
     </footer>
+
+    <section id ='login-form'>
+        <div class="container">
+            <div class="login-form">
+                <button class="close" id="close">
+                    <span > X </span>
+                </button>
+
+                <div class="form-body">
+                    <h3 class="title">Login Form</h3>
+
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" class="form-control" placeholder="Enter email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-key"></i></span>
+                        <input type="password" class="form-control" placeholder="Password" required>
+                    </div>
+
+                    <button class="btn login-pop">Login</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id ='signup-form'>
+        <div class="container">
+            <div class="signup-form">
+                <button class="close" id="close-signup">
+                    <span > X </span>
+                </button>
+
+                <div class="form-body">
+                    <h3 class="title">Sign Up Form</h3>
+
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-user"></i></span>
+                        <input type="email" class="form-control" placeholder="Enter username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" class="form-control" placeholder="Enter email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-key"></i></span>
+                        <input type="password" class="form-control" placeholder="Password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-check-circle-o"></i></span>
+                        <input type="password" class="form-control" placeholder="Confirm Password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-picture-o"></i></span>
+                        <input type="text" class="form-control" placeholder="Add image URL" required>
+                    </div>
+
+                    <button class="btn signup-pop">signup</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="https://use.fontawesome.com/cf3935a44e.js"></script>
 </body>
 </html>
