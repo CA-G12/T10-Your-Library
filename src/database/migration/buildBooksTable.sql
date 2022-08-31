@@ -6,7 +6,8 @@ CREATE TABLE books(
     title VARCHAR(255) NOT NULL, 
     discription TEXT NOT NULL,
     url_image TEXT NOT NULL,
-    user_id  INTEGER NOT NULL FOREIGN KEY REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE, 
-)
+    user_id  INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
 
 COMMIT;
