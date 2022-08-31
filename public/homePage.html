@@ -3,14 +3,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/homePage.css">
+    <link rel="stylesheet" href="./CSS/indexStyle.css">
     <link rel="shortcut icon" href="./assets/book-logo.png" type="image/x-icon">
+    <script src="./JS/dom.js" defer></script>
     <title>Your Library</title>
 </head>
 <body>
     <header>
         <nav>
-            <img src="image/book-logo.png" alt="Your library" class="logo-nav">
+            <img src="./assets/book-logo.png" alt="Your library" class="logo-nav">
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="#" class="nav-item-link" style="color: #e55b13">Home</a>
@@ -24,53 +25,108 @@
                 <li class="nav-item">
                     <a href="#" class="nav-item-link">Community</a>
                 </li>
-                <li class="nav-item">
-                    <button href="#" class="nav-item-link  login-pop btn" id="login">Login</button>
+                <li class="nav-item" id="profile">
+                      <img src="https://thumbs.dreamstime.com/b/person-icon-142606543.jpg" alt="" class="profile">
                 </li>
                 <li class="nav-item">
-                    <button href="#" class="nav-item-link  sign-up btn" id="signup">Sign up</button>
+                    <button href="#" class="nav-item-link  btn" id="logout">
+                      <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </button>
                 </li>
             </ul>
         </nav>
     </header>
-<section>
-    <div class="cards">
-        <div class="image-card">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71NFcRl66bL.jpg" >
-        </div>
-        <h2>Harry Potter and the Order</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti non quaerat ullam! Natus ratione eligendi ullam!</p>
-        <div class="btns">
-            <button class="btn btn_delete">Delete</button>
-            <button class="btn btn_add">Add</button>
-        </div>
-    </div>
 
-    <div class="cards">
-        <div class="image-card">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71NFcRl66bL.jpg" >
+    <section class="cards-section">
+        <div class="cards">
+            <div class="image-card">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71NFcRl66bL.jpg" >
+            </div>
+            <div class="btns">
+                <button class="btn btn_delete">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn_add">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
-        <h2>Harry Potter and the Order</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti non quaerat ullam! Natus ratione eligendi ullam!</p>
-        <div class="btns">
-            <button class="btn btn_delete">Delete</button>
-            <button class="btn btn_add">Add</button>
-        </div>
-    </div>
 
-    <div class="cards">
-        <div class="image-card">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71NFcRl66bL.jpg" >
+        <div class="cards">
+            <div class="image-card">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71NFcRl66bL.jpg" >
+            </div>
+            <div class="btns">
+                <button class="btn btn_delete">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn_add">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
-        <h2>Harry Potter and the Order</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti non quaerat ullam! Natus ratione eligendi ullam!</p>
-        <div class="btns">
-            <button class="btn btn_delete">Delete</button>
-            <button class="btn btn_add">Add</button>
-        </div>
-    </div>
 
-</section>
+        <div class="cards">
+            <div class="image-card">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71NFcRl66bL.jpg" >
+            </div>
+            <div class="btns">
+                <button class="btn btn_delete">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn_add">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="image-card">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71NFcRl66bL.jpg" >
+            </div>
+            <div class="btns">
+                <button class="btn btn_delete">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn_add">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-pop">
+      <button class="close" id="close-book">
+        <span > X </span>
+    </button>
+      <div class="pop-container">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71NFcRl66bL.jpg" alt="" class="book-img">
+        <div class="pop-content">
+          <h1 class="book-title">This is book title</h1>
+          <p class="book-author">Ibtisam Hemmo</p>
+          <ul class="stars">
+            <li class="star">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </li>
+            <li class="star">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </li>
+            <li class="star">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </li>
+            <li class="star">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </li>
+            <li class="star">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </li>
+          </ul>
+          <p class="book-desc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, voluptatibus ducimus. Quae maxime voluptatum repudiandae est, hic sequi soluta ex vero? Esse molestias explicabo quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maiores culpa cumque quo dolore nulla tenetur cupiditate similique odit error iure quibusdam, illo adipisci ipsam.
+          </p>
+        </div>
+      </div>
+    </section>
     <script src="https://use.fontawesome.com/cf3935a44e.js"></script>
 </body>
 </html>
