@@ -219,7 +219,7 @@ button:hover{
 
 }
 
-button#close , #close-signup{
+button#close , #close-signup, #close-book{
     background-color: red;
     border: none;
     border-radius: 5px;
@@ -227,6 +227,10 @@ button#close , #close-signup{
     color: white;
     float: right;
     margin-right: 21px;
+}
+
+button:hover{
+    cursor: pointer;
 }
 
 .login-form, .signup-form{
@@ -280,9 +284,9 @@ button#close , #close-signup{
 }
 
 .btn{
-    padding: 6px 19px;
+    padding: 8px 15px;
     background-color: var(--orange);
-    border-radius: 6px;
+    border-radius: 10px;
     color: white;
     font-size: 16px;
     font-weight: lighter;
@@ -292,3 +296,137 @@ button#close , #close-signup{
 
                                 /* End Styling Landing Page */
 
+
+                                /* Start Styling Home Page */
+
+/*Start Styling cards */
+
+img.profile {
+    width: 43px;
+    border-radius: 50%;
+}
+
+.cards-section {
+    display: flex;
+    padding: 2% 5%;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 26px;
+}
+
+.cards{
+    padding: 6px;
+    background-color: var(--beige);
+    display: flex;
+    border-radius: 6px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+}
+
+.cards .image-card{
+    width: 100%;
+    height: 10%;
+}
+
+.cards .image-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.cards h2{
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.cards p{
+    font-size: 14px;
+    text-align: center;
+}
+
+.cards .btns{
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+button#logout {
+    color: white;
+    background-color: var(--orange);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+button.btn.btn_delete {
+    margin-right: 10px;
+}
+
+.book-pop{
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff20;
+    backdrop-filter: blur(.3rem);
+    padding: 7% 12%;
+} 
+
+.pop-container {
+    background-color: #ebe2d6cc;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+img.book-img {
+    width: 350px;
+    height: 426px;
+}
+
+.pop-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 425px;
+    padding: 3%;
+    margin-left: 55px;
+}
+
+h1.book-title {
+    color: var(--navy);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+p.book-author {
+    margin-bottom: 17px;
+    color: var(--brown);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+ul.stars {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    font-size: 23px;
+    color: var(--orange);
+}
+
+p.book-desc {
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 47px;
+    line-height: 30px;
+}
+                                /* End Styling Home Page */

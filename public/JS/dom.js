@@ -1,22 +1,13 @@
-const login = document.getElementById('login');
-const signup = document.getElementById('signup');
-const close = document.getElementById('close');
-const closeSignup = document.getElementById('close-signup');
-const loginForm = document.getElementById('login-form');
-const signupForm = document.getElementById('signup-form');
+const card = document.querySelectorAll('.cards');
+const cardsSection = document.querySelector('.book-pop');
+const closeBookPop = document.getElementById('close-book');
 
-login.addEventListener('click', () => {
-  loginForm.style.display = 'block';
-});
+card.forEach((card)=>{
+  card.addEventListener('click', ()=>{
+    cardsSection.style.display = 'block';
+  })
+}) 
 
-signup.addEventListener('click', () => {
-  signupForm.style.display = 'block';
-});
-
-close.addEventListener('click', () => {
-  loginForm.style.display = 'none';
-});
-
-closeSignup.addEventListener('click', () => {
-  signupForm.style.display = 'none';
+closeBookPop.addEventListener('click', () => {
+  cardsSection.style.display = 'none';
 });
