@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Roboto&family=Roboto+Slab&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' ,'Poppins', "Courgette", 'Times New Roman', Times, serif;
+}
+
+:root {
+    --navy: #003060;
+    --orange: #e55b13;
+    --yellow: #f8c625;
+    --brown: #a47551;
+    --beige: #e9dccb;
+    --light-beige: #f6eee0;
+}
+
+                                /* Start Styling Landing Page */
+
+/* Start Styling Nav Bar */
+
+header{
+    width: 100%;
+    background-color: var(--light-beige);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 5%;
+}
+
+.logo-nav {
+    width: 140px;
+    height: 80px;
+}
+
+ul.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+li.nav-item {
+    margin-right: 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+a.nav-item-link {
+    text-decoration: none;
+}
+
+/* End Styling Nav Bar */
+
+/* Start Styling main Section */
+
+main {
+    background-color: var(--light-beige);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 5%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1.haedline {
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+p.index-para {
+    max-width: 500px;
+    font-size: 18px;
+    color: var(--brown);
+    line-height: 29px;
+    margin-bottom: 10px;
+}
+
+button.know-more {
+    background-color: var(--orange);
+    color: white;
+    padding: 12px 29px;
+    border: none;
+    border-radius: 6px;
+    margin: 22px 0px;
+    font-size: 16px;
+}
+
+ul.icons-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+li.icon {
+    background-color: var(--brown);
+    color: white;
+    margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+
+/* end Styling main Section */
+
+/* cards */
+section {
+    display: flex;
+    padding: 2% 5%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.cards{
+    width: 30%;
+    padding: 16px;
+    background-color: var(--beige);
+    display: flex;
+    border-radius: 6px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+}
+.cards .image-card{
+    width: 100%;
+    height: 10%;
+}
+.cards .image-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.cards h2{
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+}
+.cards p{
+font-size: 14px;
+text-align: center;
+}
+.cards .btns{
+margin: 10px ;
+
+}
+.cards .btns .btn{
+    padding: 6px 19px;
+    background-color: var(--orange);
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: lighter;
+    border: none;
+    margin: 0 13px;
+}
