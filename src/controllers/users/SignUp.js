@@ -8,7 +8,7 @@ const signUp = (req, res, next)=>{
     let { name, email, password, imageUrl } = req.body;
     const {error} = signUpSchema.validate({name, email, password, imageUrl}, {abortEarly:false});
     if (error) {
-      next(error);
+      res.json({ result: 'Username or Password are not in the right way' });
     }
     else {
       bcrypt.genSalt(10, (err, salt) => {
