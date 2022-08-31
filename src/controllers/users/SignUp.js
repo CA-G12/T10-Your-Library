@@ -8,7 +8,7 @@ const signUp = (req, res, next)=>{
     let { name, email, password, imageUrl } = req.body;
     const {error} = signUpSchema.validate({name, email, password, imageUrl}, {abortEarly:false});
     if (error) {
-      next(error);
+      res.json({ result: 'Username or Password are not in the right way' });
     }
     else {
       bcrypt.genSalt(10, (err, salt) => {
@@ -21,8 +21,7 @@ const signUp = (req, res, next)=>{
           .then(() => {
             const payload = { name: name, email: email}
             const token = jwt.sign(payload, process.env.SECRET_KEY, { algorithm: 'HS256'});
-            //TODO: Redirect to Home page.
-            res.cookie('token', token).redirect('/');
+            res.cookie('token', token).redirect('/homePage');
           })
           .catch((err) => next(err));
         });

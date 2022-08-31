@@ -23,7 +23,10 @@ function loginUser(email, password) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(userInfo),
-  });
+  }).then((res) => {
+    console.log(res.json());
+    window.location = '../homePage';
+  }).catch((err) => console.log(err));
 }
 
 function signUp(name, email, password, imageUrl) {
@@ -40,7 +43,10 @@ function signUp(name, email, password, imageUrl) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(userInfo),
-  });
+  }).then((res) => {
+    console.log(res.json());
+    window.location = '../homePage';
+  }).catch((err) => console.log(err));
 }
 
 signUpFormButton.addEventListener('click', () => signUp(name, email, password, imageUrl));
