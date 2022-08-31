@@ -25,10 +25,11 @@ module.exports = (req,res,next)=>{
                     const payload = {email};
                     const token = jwt.sign(payload,process.env.SECRET_KEY, {algorithm:'HS256'});
                     //TODO : redirect To Home Page
-                    res.cookie('token',token).redirect('/');
+                    res.cookie('token',token).redirect('/homePage');
+                }else{
+                    res.json({msg:'password is false'})
                 }
             })
         }).catch(err=> next(err))
-       
     }
 }

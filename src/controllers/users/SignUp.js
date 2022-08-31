@@ -21,8 +21,7 @@ const signUp = (req, res, next)=>{
           .then(() => {
             const payload = { name: name, email: email}
             const token = jwt.sign(payload, process.env.SECRET_KEY, { algorithm: 'HS256'});
-            //TODO: Redirect to Home page.
-            res.cookie('token', token).redirect('/');
+            res.cookie('token', token).redirect('/homePage');
           })
           .catch((err) => next(err));
         });
