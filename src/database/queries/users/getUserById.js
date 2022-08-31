@@ -1,5 +1,5 @@
 const connection = require('../../config/connection');
 
-const getUserbyID = (userId) => connection.query('SELECT user_name, url_image FROM users WHERE id= $1', [userId]);
+const getUserbyID = (email) => connection.query('SELECT email, password FROM users WHERE email= $1', [email]);
 
 module.exports = getUserbyID;
