@@ -12,6 +12,6 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        // "no-unused-vars": ["allow", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+        "no-shadow": ["allow", { "builtinGlobals": false, "hoist": "functions", "allow": [], "ignoreOnInitialization": false }]
     }
 }

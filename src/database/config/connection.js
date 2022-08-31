@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
-require('dotenv')('.env');
+require('dotenv').config();
 
 const {
   NODE_ENV, DATABASE_URL, DB_URL, BD_TEST_URL,
