@@ -19,7 +19,10 @@ module.exports = (req,res,next)=>{
                 if(result){
                     const payload = {email};
                     const token = jwt.sign(payload,process.env.SECRET_KEY, {algorithm:'HS256'});
-                    res.cookie('token',token).redirect('/homePage');
+                    res.cookie('token',token);
+                    res.json({'message':"sucess"});
+                    
+                    // res.cookie('token',token).redirect('/home');
                 }else{
                     res.json({msg:'password is false'})
                 }
