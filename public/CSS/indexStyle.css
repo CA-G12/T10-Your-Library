@@ -312,6 +312,7 @@ img.profile {
     justify-content: space-evenly;
     align-items: center;
     gap: 26px;
+    flex-wrap: wrap;
 }
 
 .cards{
@@ -323,6 +324,7 @@ img.profile {
     align-items: center;
     justify-content: center;
     color: var(--navy);
+    width: 282px;
 }
 
 .cards .image-card{

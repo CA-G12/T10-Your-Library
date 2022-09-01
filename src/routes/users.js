@@ -6,5 +6,6 @@ const {userAuthenticated} = require('../middleware/index')
 router.get('/homePage', userAuthenticated, homePage);
 router.post('/users/SignUp', userConroller.signUp);
 router.post('/users/login', userConroller.login);
+router.get('/logOut',userConroller.logOut);
 
 module.exports = router;
