@@ -17,6 +17,7 @@ function loginUser(email, password) {
     email: email.value,
     password: password.value,
   };
+  console.log(userInfo),
 
   fetch('/users/login', {
     method: 'POST',
@@ -24,11 +25,9 @@ function loginUser(email, password) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(userInfo),
-  }).then((res) => {
-    return res.json()
-  }).then(data => {if(data.message === 'sucess'){
+  }).then(() => {
     window.location = '../homePage';
-  }}).catch((err) => console.log(err));
+  }).catch((err) => console.log(err));
 }
 
 function signUp(name, email, password, imageUrl) {
@@ -45,8 +44,7 @@ function signUp(name, email, password, imageUrl) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(userInfo),
-  }).then((res) => {
-    console.log(res.json());
+  }).then(() => {
     window.location = '../homePage';
   }).catch((err) => console.log(err));
 }
