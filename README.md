@@ -4,7 +4,7 @@ This site enables you to add a review for specific books.
 
  
 ## live page
-- Click [here](https://your0library.herokuapp.com/) to get into the live page.
+- Click [here](https://library-gsg.herokuapp.com/) to get into the live page.
  
 
 ## User Journey
