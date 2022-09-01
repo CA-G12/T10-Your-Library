@@ -1,3 +1,4 @@
+
 const name = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
@@ -24,9 +25,10 @@ function loginUser(email, password) {
     },
     body: JSON.stringify(userInfo),
   }).then((res) => {
-    console.log(res.json());
+    return res.json()
+  }).then(data => {if(data.message === 'sucess'){
     window.location = '../homePage';
-  }).catch((err) => console.log(err));
+  }}).catch((err) => console.log(err));
 }
 
 function signUp(name, email, password, imageUrl) {
